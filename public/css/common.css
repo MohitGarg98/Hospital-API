@@ -1,0 +1,97 @@
+body
+{
+    background-image: url(../images/doc2.png);
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+a{
+    font-weight: 500;
+    color: rgb(31, 31, 153);
+}
+
+p{
+    font-size: 13px;
+    display: inline;
+}
+
+h3
+{
+    text-align: center;
+    color: rgb(114, 113, 113);
+}
+
+.red{
+    border-color: rgb(243, 75, 75);
+    outline: 0;
+    -webkit-box-shadow: inset 0 5px 5px rgba(202, 20, 20, 0.075), 0 0 10px rgba(207, 22, 22, 0.6);
+    box-shadow: inset 0 5px 5px rgba(202, 20, 20,.075), 0 0 10px rgba(207, 22, 22, .6);
+}
+
+.error{
+    color: red;
+}
+
+#sign{
+    margin-top: 10px;
+}
+
+#exampleInputEmail1::-webkit-inner-spin-button, 
+#exampleInputEmail1::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#form{
+    /* background-color:rgb(75, 150, 200, .6); */
+    background-color: rgb(161, 161, 161, .3);
+    /* opacity: .7; */
+    box-shadow: inset 0 0 0 , 0 0 4px rgb(180, 178, 178);
+    width: 35%;
+    /* margin: auto; */
+    padding: 10px 5px;
+    /* margin-top: 4%; */
+    /* margin-bottom: 1%; */
+
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.custom-btn{
+  display: block;
+  background-color: white;
+  margin: auto;
+  width: 30%;
+  height: 7vh;
+  border: none;
+  border-radius: 20px;
+  margin-top: 20px;
+  outline: none;
+}
+
+.input-box{
+    background: transparent;
+    border-top: 0;
+    border-bottom: 2px solid #E5EEF6;
+    border-left: 0;
+    border-right: 0;
+}
+
+.input-box:focus{
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+#home{
+    position: absolute;
+    width: auto;
+    margin: 5px;
+    background-color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: cornsilk;
+    border-radius: 5px;
+}

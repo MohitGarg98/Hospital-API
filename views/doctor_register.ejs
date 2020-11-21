@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/common.css">
+<form name="form" id="form" action="/doctors/register" method="POST">
+    <h3>Doctor Registeration</h3>
+
+    <div class="form-group">
+        <input type="text" name="name" class="form-control input-box" id="exampleInputName1" placeholder="Enter Your Name" autocomplete="off">
+        <p id="name" class="error"></p>
+    </div>
+    <div class="form-group">
+        <input type="text" name="username" class="form-control input-box" id="exampleInputId" placeholder="Enter Your ID" autocomplete="off">
+        <p id="username" class="error"></p>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" class="form-control input-box" id="exampleInputPassword1" placeholder="Password">
+        <p id="password" class="">**At least 6 character and a special symbol</p>
+    </div>
+    <div class="form-group">
+        <input type="password" name="cpassword" class="form-control input-box" id="exampleInputCPassword1" placeholder="Confirm Password">
+        <p id="cpassword" class="error"></p>
+    </div>
+    <input type="submit" class="custom-btn" value="Register">
+    <h6 id="sign">Already have an account? <a href="/doctors/login">Sign in</a></h6>
+</form>
+<script src="/js/doctor_register.js"></script>
+<script>
+    <% if(failure_msg && failure_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= failure_msg %>",
+            type: 'error',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>
+

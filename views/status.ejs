@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/all_report.css">
+<a href="/doctors/home" id="home">Home</a>
+<div id="head">
+    <h3>All Specific Reports</h3>
+</div>
+<ul class="list-container">
+    <% for(var i = 0; i < reports.length; i++) { %>
+        <div id="report">
+            <li><p class="bold">Patient Name:</p> <%= reports[i].name %></li>
+            <li><p class="bold">Doctor Name:</p> <%= reports[i].doctorName %></li>
+            <li><p class="bold">Status:</p> <%= reports[i].status %></li>
+            <li><p class="bold">Date:</p> <%= reports[i].date %></li>
+        </div>
+    <% } %>
+</ul>

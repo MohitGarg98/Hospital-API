@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/css/create_report.css">
+<a href="/doctors/home" id="home">Home</a>
+<form name="form" id="form" action="/patients/<%= id %>/createreport" method="POST">
+    <h3>Create Report</h3>
+    <div class="form-group">
+        <h6>Patients Status:</h6>
+        <input type="radio" name="status" id="positive-admit" value="Positive-Admit" required>
+        <label for="positive-admit">Positive-Admit</label><br>
+        <input type="radio" name="status" id="symptoms-quarantine" value="Symptoms-Quarantine" required>
+        <label for="symptoms-quarantine">Symptoms-Quarantine</label><br>
+        <input type="radio" name="status" id="travelled-quarantine" value="Travelled-Quarantine" required>
+        <label for="travelled-quarantine">Travelled-Quarantine</label><br>
+        <input type="radio" name="status" id="negative" value="Negative" required>
+        <label for="negative">Negative</label>
+    </div>
+    <div class="form-group">
+        <label for="date"><h6>Date:</h6></label>
+        <input type="date" name="date" id="date" class="form-control" required>
+        <p id="password" class="error"></p>
+    </div>
+    <input type="submit" class="custom-btn" value="Create">
+</form>
+<script>
+    <% if(success_msg && success_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= success_msg %>",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>
+
+

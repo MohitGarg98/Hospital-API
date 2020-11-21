@@ -1,0 +1,17 @@
+#date{
+    width: auto;
+    text-transform: uppercase;
+}
+.inline{
+    display: inline;
+}
+#home{
+    position: absolute;
+    width: auto;
+    margin: 5px;
+    background-color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: cornsilk;
+    border-radius: 5px;
+}

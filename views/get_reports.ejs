@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/css/common.css">
+<a href="/doctors/home" id="home">Home</a>
+<form name="form" id="form" action="/patients/getreports" method="POST">
+    <h3>Get Patient Reports</h3>
+    <div class="form-group">
+        <input type="number" name="username" class="form-control input-box" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Mobile Number" autocomplete="off" required>
+        <p id="username" class="error"></p>
+    </div>
+    <input type="submit" class="custom-btn" value="Submit">
+    </div>
+</form>
+
+<script>
+    <% if(failure_msg && failure_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= failure_msg %>",
+            type: 'error',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>
+
+

@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="/css/common.css">
+<form name="form" id="form" action="/doctors/login" method="POST">
+    <h3>Doctor Login</h3>
+    <div class="form-group">
+        <input type="text" name="username" class="form-control input-box" id="exampleInputId" aria-describedby="emailHelp" placeholder="Enter Your ID" autocomplete="off">
+        <p id="username" class="error"></p>
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" class="form-control input-box" id="exampleInputPassword" placeholder="Password">
+        <p id="password" class="error"></p>
+    </div>
+    <input type="submit" class="custom-btn" value="Login" id="submitButton">
+    <h6 id="sign">New User ? <a href="/doctors/register">Sign Up</a></h6> 
+</form>
+<script src="/js/doctor_login.js"></script>
+<script>
+    <% if(failure_msg && failure_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= failure_msg %>",
+            type: 'error',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>  

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/css/home.css">
+<h6 id="doctor">Hi, <%= doctor %></h6>
+<div class="container">
+    <ul>
+        <a class="menu" href="/patients/register"><li>Register Patient</li></a>
+        <a class="menu" href="/patients/getpatient"><li>Login Patient</li></a>
+        <a class="menu" href="/patients/getreports"><li>Patient Reports</li></a>
+        <a class="menu" href="/patients/getstatus"><li>Specific Status Reports</li></a>
+        <a class="menu" href="/patients/logout"><li>Logout</li></a>
+    </ul>
+</div>
+<script>
+    <% if(success_msg && success_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= success_msg %>",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>

@@ -1,0 +1,62 @@
+body{
+    background-image: url('../images/cor2.jpg');
+    background-size: cover;
+}
+#head
+{
+    text-align: center;
+}
+.list-container
+{    
+    display: block;
+    width: 45%;
+    margin: auto;
+    height: 88vh;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#report
+{
+    background-color: rgb(252, 248, 248);
+    border: 2px solid black;
+    padding: 15px 10px;
+    margin: 5px;
+}
+
+h3
+{
+    margin: 10px 0;
+}
+
+.blue
+{
+    background-color: #5a6e8b;
+    width: 200px;
+    margin: auto;
+    padding: 5px;
+    color: cornsilk;
+    height: 35px;
+    font-size: 18px;
+}
+
+.bold
+{
+    display: inline;
+    font-weight: 500;
+}
+li
+{
+    list-style: none;
+}
+#home{
+    position: absolute;
+    width: auto;
+    margin: 5px;
+    background-color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: cornsilk;
+    border-radius: 5px;
+}

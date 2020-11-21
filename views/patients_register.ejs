@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/common.css">
+<a href="/doctors/home" id="home">Home</a>
+<form name="form" id="form" action="/patients/register" method="POST">
+    <h3>Patient Registeration</h3>
+    <div class="form-group">
+        <input type="tel" name="username" class="form-control input-box" id="exampleInputId" aria-describedby="emailHelp" placeholder="Enter Mobile Number" autocomplete="off">
+        <p id="username" class="error"></p>
+    </div>
+    <div class="form-group">
+        <input type="text" name="name" class="form-control input-box" id="exampleInputName" placeholder="Enter Patient Name" autocomplete="off">
+        <p id="name" class="error"></p>
+    </div>
+    <input type="submit" class="custom-btn" value="Register">
+</form>
+<script src="/js/patients_registration.js"></script>
+<script>
+    <% if(success_msg && success_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= success_msg %>",
+            type: 'success',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+    <% if(failure_msg && failure_msg != ''){ %>
+        new Noty({
+            theme: 'relax',
+            text: "<%= failure_msg %>",
+            type: 'error',
+            layout: 'topRight',
+            timeout: 2500
+        }).show();
+    <% } %>
+</script>
+
+

@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/css/all_report.css">
+<a href="/doctors/home" id="home">Home</a>
+<div id="head">
+    <h3>All reports</h3>
+    <h6 class="blue">Patient Name: <%= patient[0].name %></h6>
+</div>
+<ul class="list-container">
+    <% for(var i = 0; i < patient.length; i++) { %>
+        <div id="report">
+            <li><p class="bold">Doctor Name:</p> <%= patient[i].doctorName %></li>
+            <li><p class="bold">Status:</p> <%= patient[i].status %></li>
+            <li><p class="bold">Date:</p> <%= patient[i].date %></li>
+        </div>
+    <% } %>
+</ul>
